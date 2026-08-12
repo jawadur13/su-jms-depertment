@@ -66,12 +66,12 @@ export default function ProgramCurriculumForm({
     <form action={formAction} className="space-y-6">
       <Card title="Basics">
         <TextField label="Slug (URL — /admission/programs/[slug])" name="slug" required monospace
-                   defaultValue={initial?.slug ?? ''} placeholder="b-arch" />
+                   defaultValue={initial?.slug ?? ''} placeholder="bss-jms" />
         <TextField label="Hero overline" name="heroOverline"
                    defaultValue={initial?.heroOverline ?? ''} placeholder="Undergraduate Program" />
         <TextField label="Hero title" name="heroTitle" required
                    defaultValue={initial?.heroTitle ?? program.programName}
-                   placeholder="B.Arch in Architecture" />
+                   placeholder="BSS (Honors) in Journalism and Media Studies" />
         <NumberField label="Display order" name="displayOrder" defaultValue={initial?.displayOrder ?? 0} />
       </Card>
 
@@ -83,7 +83,7 @@ export default function ProgramCurriculumForm({
 
       <Card title="Intro">
         <TextField label="Intro overline pill" name="introOverline"
-                   defaultValue={initial?.introOverline ?? ''} placeholder="Bachelor of Architecture (B.Arch)" />
+                   defaultValue={initial?.introOverline ?? ''} placeholder="Bachelor of Social Science (Honors) in Journalism and Media Studies (JMS)" />
         <TextAreaField label="Intro paragraph" name="introBody" rows={3}
                        defaultValue={initial?.introBody ?? ''} />
       </Card>

@@ -210,7 +210,7 @@ function ItemCard({
                      placeholder="Program page" />
               <Input label="Link URL (optional)" value={step.linkHref}
                      onChange={(v) => onUpdateStep(step.id, 'linkHref', v)}
-                     placeholder="/admission/programs/b-arch" />
+                     placeholder="/admission/programs/bss-jms" />
               <button
                 type="button"
                 onClick={() => onRemoveStep(step.id)}
