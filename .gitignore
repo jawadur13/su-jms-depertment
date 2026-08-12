@@ -37,3 +37,6 @@ next-env.d.ts
 
 # scratch/planning files — not part of the project, deleted when done
 /temp/
+
+# Playwright MCP tool output (snapshots, screenshots) — not project content
+/.playwright-mcp/
