@@ -19,7 +19,7 @@ export default function LoginPage() {
             className="h-16 w-auto mx-auto mb-4 object-contain"
           />
           <div className="text-[10px] font-semibold tracking-[0.18em] uppercase text-gray-400">
-            Department of Architecture · Admin Panel
+            Department of Journalism and Media Studies · Admin Panel
           </div>
           <h1 className="text-2xl font-display font-bold text-primary mt-2">
             Sign in

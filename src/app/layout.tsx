@@ -24,17 +24,17 @@ const hindSiliguri = Hind_Siliguri({
   display: 'swap',
 });
 
-const SITE_URL = 'https://su-architecture-olive.vercel.app';
-const SITE_NAME = 'Sonargaon University — Department of Architecture';
+const SITE_URL = 'https://su-journalism-olive.vercel.app';
+const SITE_NAME = 'Sonargaon University — Department of Journalism and Media Studies';
 const SITE_DESCRIPTION =
-  'Department of Architecture at Sonargaon University — programs, faculty, research areas, labs, admissions, and campus services.';
+  'Department of Journalism and Media Studies at Sonargaon University — programs, faculty, research areas, labs, admissions, and campus services.';
 const OG_IMAGE = '/assets/og-banner.webp';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default: SITE_NAME,
-    template: '%s — Sonargaon University Architecture',
+    template: '%s — Sonargaon University Journalism and Media Studies',
   },
   description: SITE_DESCRIPTION,
   alternates: {
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
         url: OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: 'Sonargaon University — Department of Architecture',
+        alt: 'Sonargaon University — Department of Journalism and Media Studies',
       },
     ],
   },
