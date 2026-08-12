@@ -5,9 +5,9 @@ import { sanitizeHtml } from '@/lib/sanitize-html';
 import { DynamicLucideIcon } from '@/components/ui/DynamicLucideIcon';
 
 export const metadata = {
-  title: 'Tuition Fees — Department of Architecture',
+  title: 'Tuition Fees — Department of Journalism and Media Studies',
   description:
-    'Tuition fee structures by program at Sonargaon University Department of Architecture.',
+    'Tuition fee structures by program at Sonargaon University Department of Journalism and Media Studies.',
 };
 
 // Phase 20 — overview / shifts / policies all use DynamicLucideIcon

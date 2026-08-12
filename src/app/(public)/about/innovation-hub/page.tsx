@@ -8,7 +8,7 @@ import { DynamicLucideIcon } from '@/components/ui/DynamicLucideIcon';
 import JoinInnovationHubButton from './JoinInnovationHubButton';
 
 export const metadata = {
-  title: 'SU Innovation Hub — Department of Architecture',
+  title: 'SU Innovation Hub — Department of Journalism and Media Studies',
   description:
     'SU Innovation Hub — fostering innovation, creativity, and collaborative problem-solving through workshops, seminars, design competitions, and practical learning experiences.',
 };

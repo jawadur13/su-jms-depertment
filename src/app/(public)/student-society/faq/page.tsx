@@ -4,7 +4,7 @@ import { getFaqs, getPageHero } from '@/lib/identity';
 import FAQList from './FAQList';
 
 export const metadata = {
-  title: 'FAQ — Department of Architecture',
+  title: 'FAQ — Department of Journalism and Media Studies',
   description:
     'Frequently asked questions about admission, rankings, campus, programs, and exams at Sonargaon University.',
 };

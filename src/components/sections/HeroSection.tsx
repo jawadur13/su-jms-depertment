@@ -9,9 +9,9 @@ import {ChevronRight, Home} from 'lucide-react';
 // (Phase 3). When an admin replaces a hero image, they edit the
 // matching alt in the same form. Null alt → generic slot label.
 const FALLBACK_ALTS = [
-  'Sonargaon University Department of Architecture',
-  'Sonargaon University Architecture students and faculty',
-  'Sonargaon University Architecture campus',
+  'Sonargaon University Department of Journalism and Media Studies',
+  'Sonargaon University Journalism and Media Studies students and faculty',
+  'Sonargaon University Journalism and Media Studies campus',
 ];
 
 type HeroSectionProps = {
@@ -32,7 +32,7 @@ export default function HeroSection({
 }: HeroSectionProps) {
   const heroImages = imageUrls.map((src, i) => ({
     src,
-    alt: imageAlts[i] ?? FALLBACK_ALTS[i] ?? `Sonargaon University Architecture — slide ${i + 1}`,
+    alt: imageAlts[i] ?? FALLBACK_ALTS[i] ?? `Sonargaon University Journalism and Media Studies — slide ${i + 1}`,
     verticalPercent: imageVerticalPercents[i] ?? 50,
   }));
   const [activeImage, setActiveImage] = useState(0);
@@ -108,7 +108,7 @@ export default function HeroSection({
             transition={{ delay: 0.35, duration: 0.8 }}
             className="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-white uppercase tracking-tight leading-tight drop-shadow-2xl"
           >
-            Architecture
+            Journalism &amp; Media Studies
           </motion.h1>
 
           {/* Subtitle */}
@@ -118,7 +118,7 @@ export default function HeroSection({
             transition={{ delay: 0.6, duration: 0.7 }}
             className="text-sm md:text-base lg:text-lg text-white/85 font-light max-w-2xl leading-relaxed"
           >
-            Shaping architects who design tomorrow&rsquo;s spaces, structures, and cities.
+            Shaping storytellers and media professionals who inform tomorrow&rsquo;s audiences.
           </motion.p>
         </div>
       </Container>

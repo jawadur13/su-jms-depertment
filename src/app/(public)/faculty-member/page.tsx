@@ -6,9 +6,9 @@ import Container from '@/components/ui/Container';
 import { getFacultyList, getPageHero } from '@/lib/identity';
 
 export const metadata = {
-  title: 'Faculty Members — Department of Architecture',
+  title: 'Faculty Members — Department of Journalism and Media Studies',
   description:
-    'Faculty members of the Department of Architecture, Sonargaon University — Dean, Head of Department, full-time and part-time faculty.',
+    'Faculty members of the Department of Journalism and Media Studies, Sonargaon University — Dean, Head of Department, full-time and part-time faculty.',
 };
 
 const initialsOf = (name: string) =>

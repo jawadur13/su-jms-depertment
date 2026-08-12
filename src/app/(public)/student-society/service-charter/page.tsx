@@ -5,8 +5,8 @@ import ServiceCharterClient from './ServiceCharterClient';
 import ServiceDirectory from './ServiceDirectory';
 
 export const metadata = {
-  title: 'Service and Charter — Department of Architecture',
-  description: 'Service and charter documents for Architecture at Sonargaon University.',
+  title: 'Service and Charter — Department of Journalism and Media Studies',
+  description: 'Service and charter documents for Journalism and Media Studies at Sonargaon University.',
 };
 
 export default async function ServiceCharterPage() {

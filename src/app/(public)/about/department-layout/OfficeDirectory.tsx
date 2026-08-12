@@ -1,10 +1,11 @@
 import { MapPin } from 'lucide-react';
 
-// Room numbers and floor assignments sourced from the department's own
-// IAB self-assessment floor plans ("Layout-Architecture.pdf", ss6.40/6.80 —
-// Department Of Architecture, SU, 146, Mohakhali, Dhaka). University-wide
-// offices are shared across departments and not re-documented per floor
-// plan, so that list is maintained here directly.
+// Room numbers/floors below are carried over from the previous
+// (Architecture) department's floor plan with the room *purposes*
+// relabelled for Journalism and Media Studies — placeholder until the
+// department confirms its actual room assignments. University-wide
+// offices are shared across departments and not tied to any one
+// department's floor plan, so that list is maintained here directly.
 type OfficeRow = { name: string; level: string };
 
 const DEPARTMENT_OFFICES: OfficeRow[] = [
@@ -13,20 +14,20 @@ const DEPARTMENT_OFFICES: OfficeRow[] = [
   { name: 'Computer Lab (Room 411)', level: '3rd Floor' },
   { name: 'Common Room & Female Prayer Space', level: '3rd Floor' },
   { name: "Student's Lounge & Indoor Games", level: '3rd Floor' },
-  { name: 'Office of the Head, Department of Architecture', level: '4th Floor' },
+  { name: 'Office of the Head, Department of Journalism and Media Studies', level: '4th Floor' },
   { name: 'Faculty Workstation (Room 502)', level: '4th Floor' },
   { name: "Teacher's Room (Room 503)", level: '4th Floor' },
-  { name: 'Architecture Studio 1 (Room 501)', level: '4th Floor' },
-  { name: 'Architecture Studio 2 (Room 504)', level: '4th Floor' },
-  { name: 'Architecture Studio 3 (Room 505)', level: '4th Floor' },
-  { name: 'Architecture Studio 4 (Room 506)', level: '4th Floor' },
-  { name: 'Architecture Studio 5 (Room 507)', level: '4th Floor' },
-  { name: 'Architecture Studio 6 (Room 508)', level: '4th Floor' },
-  { name: 'Jury & Exhibition Space', level: '4th Floor' },
+  { name: 'Newsroom (Room 501)', level: '4th Floor' },
+  { name: 'Broadcast Studio (Room 504)', level: '4th Floor' },
+  { name: 'Radio Studio (Room 505)', level: '4th Floor' },
+  { name: 'Video Editing Lab (Room 506)', level: '4th Floor' },
+  { name: 'Photography Lab (Room 507)', level: '4th Floor' },
+  { name: 'Digital Media Lab (Room 508)', level: '4th Floor' },
+  { name: 'Screening & Exhibition Space', level: '4th Floor' },
   { name: 'Lecture Room 1 (Room 601)', level: '5th Floor' },
   { name: 'Lecture Room 2 (Room 602)', level: '5th Floor' },
-  { name: 'Architecture Studio 7 (Room 603)', level: '5th Floor' },
-  { name: 'Architecture Studio 8 (Room 604)', level: '5th Floor' },
+  { name: 'Multimedia Production Lab (Room 603)', level: '5th Floor' },
+  { name: 'Podcast & Audio Lab (Room 604)', level: '5th Floor' },
   { name: 'Library (Room 608)', level: '5th Floor' },
 ];
 

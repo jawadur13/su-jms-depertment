@@ -4,9 +4,9 @@ import { getEvents, getPageHero } from '@/lib/identity';
 import EventsClient from './EventsClient';
 
 export const metadata = {
-  title: 'Events — Department of Architecture',
+  title: 'Events — Department of Journalism and Media Studies',
   description:
-    'Departmental events from the Department of Architecture at Sonargaon University — sports, industrial visits, seminars, exhibitions.',
+    'Departmental events from the Department of Journalism and Media Studies at Sonargaon University — sports, industrial visits, seminars, exhibitions.',
 };
 
 export default async function EventsPage() {

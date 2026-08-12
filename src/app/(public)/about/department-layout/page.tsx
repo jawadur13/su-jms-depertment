@@ -5,8 +5,8 @@ import DepartmentLayoutClient from './DepartmentLayoutClient';
 import OfficeDirectory from './OfficeDirectory';
 
 export const metadata = {
-  title: 'Department Layout — Department of Architecture',
-  description: 'Department layout documents for Architecture at Sonargaon University.',
+  title: 'Department Layout — Department of Journalism and Media Studies',
+  description: 'Department layout documents for Journalism and Media Studies at Sonargaon University.',
 };
 
 export default async function DepartmentLayoutPage() {

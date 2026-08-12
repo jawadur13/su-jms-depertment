@@ -10,9 +10,9 @@ import {
 } from '@/lib/identity';
 
 export const metadata = {
-  title: 'Message from Head — Department of Architecture',
+  title: 'Message from Head — Department of Journalism and Media Studies',
   description:
-    'Welcome message from the Head of the Department of Architecture, Sonargaon University.',
+    'Welcome message from the Head of the Department of Journalism and Media Studies, Sonargaon University.',
 };
 
 const FALLBACK_HERO = '/assets/message-from-head-hero.webp';

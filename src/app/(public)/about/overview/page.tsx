@@ -4,9 +4,9 @@ import { getAboutOverview } from '@/lib/identity';
 import { sanitizeHtml } from '@/lib/sanitize-html';
 
 export const metadata = {
-  title: 'Overview — Department of Architecture',
+  title: 'Overview — Department of Journalism and Media Studies',
   description:
-    'Overview of the Department of Architecture — programs, vision, and the scope of architecture as a discipline and a career.',
+    'Overview of the Department of Journalism and Media Studies — programs, vision, and the scope of journalism and media studies as a discipline and a career.',
 };
 
 export default async function OverviewPage() {

@@ -14,7 +14,7 @@ export default function OverviewSection() {
           viewport={{ once: true }}
           className="mb-6 md:mb-8 text-center text-2xl font-bold leading-tight text-primary md:text-[25px]"
         >
-          Department of Architecture
+          Department of Journalism and Media Studies
         </motion.h2>
 
         <div className="mx-auto grid max-w-[1090px] items-start gap-8 lg:gap-12 lg:grid-cols-[520px_1fr]">
@@ -26,9 +26,9 @@ export default function OverviewSection() {
           >
             <p className="text-justify text-[16px] font-medium leading-[1.75] tracking-[0.035em] text-black">
 
-The Department of Architecture, under the Faculty of Science & Engineering, offers the Bachelor of Architecture (B.Arch) degree at Sonargaon University (SU). The programme follows the academic and professional standards of the Institute of Architects Bangladesh (IAB), with a continuously updated curriculum designed to meet contemporary needs while allowing flexibility based on students’ interests.
+Journalism and Media Studies is a dynamic and challenging field that plays a vital role in shaping public opinion, promoting social awareness, and strengthening democratic values. The programme focuses on shaping the next generation of media professionals who are skilled, ethical, and innovative, and who contribute meaningfully to journalism and society.
 
-Design studios form the core of the programme, supported by a 1:10 teacher-student ratio, industry-oriented projects, and research-based learning. The department also promotes co-curricular activities, cultural engagement, and strong connections with industry and other stakeholders to prepare students for successful professional careers.
+The Department of Journalism and Media Studies at Sonargaon University (SU) offers a 4-year BSS (Honors) programme featuring a comprehensive, industry-oriented curriculum. The programme emphasizes both theoretical knowledge and practical skills, preparing students for diverse careers in print, broadcast, digital media, strategic communication, and related fields.
 </p>
             <div className="grid gap-5 sm:grid-cols-2">
               <a
@@ -52,9 +52,13 @@ Design studios form the core of the programme, supported by a 1:10 teacher-stude
             viewport={{ once: true }}
             className="order-1 lg:order-2 overflow-hidden"
           >
+            {/* TODO: placeholder image left over from the Architecture-department
+                site — it lives in a different Cloudinary account (ynfut7mx, not
+                this project's dqbtpess) and does not depict this department.
+                Replace with a real Journalism and Media Studies photo. */}
             <Image
               src="https://res.cloudinary.com/ynfut7mx/image/upload/f_auto,q_auto:good/v1786350096/sonargaon-arch/gallery/z8xeifkxt2tr6riopuir.webp"
-              alt="Architecture student presenting a design studio project during jury review at Sonargaon University"
+              alt="Students of the Department of Journalism and Media Studies at Sonargaon University"
               width={2048}
               height={1364}
               sizes="(min-width: 1024px) 540px, 100vw"

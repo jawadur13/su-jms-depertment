@@ -6,9 +6,9 @@ import { getNewsletterPage } from '@/lib/identity';
 import { sanitizeHtml } from '@/lib/sanitize-html';
 
 export const metadata = {
-  title: 'Newsletter — Department of Architecture',
+  title: 'Newsletter — Department of Journalism and Media Studies',
   description:
-    'Subscribe to the Department of Architecture newsletter for monthly updates on events, research, admissions, and student achievements.',
+    'Subscribe to the Department of Journalism and Media Studies newsletter for monthly updates on events, research, admissions, and student achievements.',
 };
 
 type AdvantageRow = {

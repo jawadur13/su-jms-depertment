@@ -58,7 +58,7 @@ export async function generateMetadata({ params }: Props) {
   const curriculum = await getProgramCurriculumBySlug(slug);
   if (!curriculum) return {};
   return {
-    title: `${curriculum.heroTitle} — Department of Architecture`,
+    title: `${curriculum.heroTitle} — Department of Journalism and Media Studies`,
     description: curriculum.introBody ?? undefined,
   };
 }

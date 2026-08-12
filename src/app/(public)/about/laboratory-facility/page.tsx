@@ -5,9 +5,9 @@ import { sanitizeHtml } from '@/lib/sanitize-html';
 import { DynamicLucideIcon } from '@/components/ui/DynamicLucideIcon';
 
 export const metadata = {
-  title: 'Laboratory Facility — Department of Architecture',
+  title: 'Laboratory Facility — Department of Journalism and Media Studies',
   description:
-    'Hands-on laboratories of the Department of Architecture at Sonargaon University — design studios, model-making workshops, materials, CAD, and fabrication labs.',
+    'Hands-on laboratories of the Department of Journalism and Media Studies at Sonargaon University — design studios, model-making workshops, materials, CAD, and fabrication labs.',
 };
 
 // Phase 20 — lab.iconName + feature.iconName both resolve via

@@ -5,9 +5,9 @@ import { sanitizeHtml } from '@/lib/sanitize-html';
 import LabFacilityClient from './LabFacilityClient';
 
 export const metadata = {
-  title: 'Lab Facilities — Department of Architecture',
+  title: 'Lab Facilities — Department of Journalism and Media Studies',
   description:
-    'Departmental laboratories at Sonargaon University Architecture — design studio, model-making, materials, CAD, and fabrication, and more.',
+    'Departmental laboratories at Sonargaon University Journalism and Media Studies — newsroom, broadcast studio, editing suite, photography lab, and more.',
 };
 
 export default async function LabFacilityPage() {

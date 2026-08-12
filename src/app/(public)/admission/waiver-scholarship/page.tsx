@@ -10,7 +10,7 @@ import {
 import { DynamicLucideIcon } from '@/components/ui/DynamicLucideIcon';
 
 export const metadata = {
-  title: 'Waiver & Scholarship — Department of Architecture',
+  title: 'Waiver & Scholarship — Department of Journalism and Media Studies',
   description:
     'Tuition waivers and merit scholarships at Sonargaon University — eligibility, percentages, and how they apply.',
 };

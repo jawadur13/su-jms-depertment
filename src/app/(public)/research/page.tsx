@@ -5,9 +5,9 @@ import { getResearchPapers, getPageHero } from '@/lib/identity';
 import { LinkifiedText } from '@/components/ui/LinkifiedText';
 
 export const metadata = {
-  title: 'Research — Department of Architecture',
+  title: 'Research — Department of Journalism and Media Studies',
   description:
-    'Published research papers from the Department of Architecture, Sonargaon University.',
+    'Published research papers from the Department of Journalism and Media Studies, Sonargaon University.',
 };
 
 export default async function ResearchPage() {
@@ -29,8 +29,8 @@ export default async function ResearchPage() {
         <div className="mx-auto max-w-3xl text-center mb-10 md:mb-14">
           <p className="text-[15px] md:text-[16px] leading-[1.85] text-gray-700">
             A selection of research publications by faculty and students of the
-            Department of Architecture, Sonargaon University, spanning
-            urban design, heritage conservation, sustainable design, and more.
+            Department of Journalism and Media Studies, Sonargaon University, spanning
+            media & communication studies, digital journalism, and mass media research.
           </p>
           <p className="mt-4 inline-flex items-center gap-2 text-[13px] font-semibold text-primary bg-primary/5 px-4 py-1.5 rounded-full">
             <FileText size={14} />
