@@ -1,6 +1,6 @@
-# Sonargaon University — Architecture Department
+# Sonargaon University — Department of Journalism and Media Studies
 
-A full-stack **Next.js 15** CMS website for the Architecture department at Sonargaon University. The public-facing site is entirely database-driven via an admin panel with 30+ editable content entities. Built with **React 19**, **TypeScript**, **Tailwind CSS v4**, **Prisma**, **Better Auth**, and **Cloudinary**.
+A full-stack **Next.js 15** CMS website for the Department of Journalism and Media Studies at Sonargaon University. The public-facing site is entirely database-driven via an admin panel with 30+ editable content entities. Built with **React 19**, **TypeScript**, **Tailwind CSS v4**, **Prisma**, **Better Auth**, and **Cloudinary**.
 
 ## Tech Stack
 
@@ -45,7 +45,7 @@ cp .env.example .env
 | `CLOUDINARY_CLOUD_NAME`         | Yes      | Cloudinary cloud name                             |
 | `CLOUDINARY_API_KEY`            | Yes      | Cloudinary API key                                |
 | `CLOUDINARY_API_SECRET`         | Yes      | Cloudinary API secret                             |
-| `CLOUDINARY_UPLOAD_FOLDER`      | No       | Upload folder (default: `sonargaon-arch`)         |
+| `CLOUDINARY_UPLOAD_FOLDER`      | No       | Upload folder (default: `sonargaon-jms`)          |
 | `RESEND_API_KEY`                | No       | Resend API key; omit to disable email delivery    |
 | `INITIAL_SUPER_ADMIN_EMAIL`     | No       | Bootstrap super-admin email (one-time use)        |
 | `INITIAL_SUPER_ADMIN_PASSWORD`  | No       | Bootstrap super-admin password (one-time use)     |
