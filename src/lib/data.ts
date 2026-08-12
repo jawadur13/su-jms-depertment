@@ -1,30 +1,3 @@
-export const programs: {
-  id: string;
-  title: string;
-  subtitle?: string;
-  duration?: string;
-  description: string;
-  image: string;
-  specializations?: string[];
-  cta: string;
-}[] = [
-  {
-    id: 'undergrad',
-    title: 'Undergraduate',
-    subtitle: 'B.Sc in Architecture',
-    duration: '4 Years · 8 Semesters',
-    description: 'Our flagship undergraduate program builds a strong foundation in core architectural design — combining rigorous theory, hands-on studio practice, and design projects that prepare graduates for industry, research, and global postgraduate study.',
-    image: '/assets/program-undergraduate.webp',
-    specializations: [
-      'Architectural Design',
-      'Urban & Regional Planning',
-      'Building Technology',
-      'Sustainable Design',
-    ],
-    cta: 'View More',
-  },
-];
-
 // quickLinks — Navbar mobile drawer no longer reads this (Phase 3:
 // derives from main_nav 'Admission' group); kept here for the
 // homepage QuickLinksSection content card, which Phase 5+ will
@@ -38,16 +11,6 @@ export const quickLinks: { name: string; href: string; external?: boolean; disab
   { name: 'ERP', href: 'http://sue.su.edu.bd:5081/sonargaon_erp/', external: true },
   { name: 'Admission Notice', href: '/admission/notice' },
   { name: 'Library', href: 'http://lib.su.edu.bd', external: true },
-];
-
-export const researchAreas = [
-  { name: 'Urban & Regional Planning', icon: 'Map' },
-  { name: 'Sustainable Design', icon: 'Leaf' },
-  { name: 'Building Technology', icon: 'Building2' },
-  { name: 'Heritage Conservation', icon: 'Landmark' },
-  { name: 'Housing & Community Design', icon: 'Home' },
-  { name: 'Landscape Architecture', icon: 'Trees' },
-  { name: 'Digital Fabrication', icon: 'Layers' }
 ];
 
 export const campusServices: { name: string; description: string; image: string; href?: string }[] = [
