@@ -1,4 +1,4 @@
-import { Calendar, FileText, Hash, Download, Building2 } from 'lucide-react';
+import { Calendar, FileText, Hash, Download, Building2, ExternalLink } from 'lucide-react';
 import PageShell from '@/components/layout/PageShell';
 import Container from '@/components/ui/Container';
 import { getActiveAdmissionNotice, getPageHero } from '@/lib/identity';
@@ -149,13 +149,24 @@ export default async function AdmissionNoticePage() {
                   </div>
                 </div>
 
-                <a
-                  href={toDownloadUrl(notice.fileUrl, notice.fileName)}
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-primary to-accent text-white font-semibold rounded-md shadow-md hover:shadow-lg hover:brightness-110 transition-all whitespace-nowrap"
-                >
-                  <Download size={18} />
-                  Download Notice (PDF)
-                </a>
+                <div className="flex items-center gap-3 shrink-0">
+                  <a
+                    href={notice.fileUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-primary to-accent text-white font-semibold rounded-md shadow-md hover:shadow-lg hover:brightness-110 transition-all whitespace-nowrap"
+                  >
+                    <ExternalLink size={18} />
+                    View Notice
+                  </a>
+                  <a
+                    href={toDownloadUrl(notice.fileUrl, notice.fileName)}
+                    className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold rounded-md transition-colors whitespace-nowrap"
+                  >
+                    <Download size={18} />
+                    Download
+                  </a>
+                </div>
               </div>
             )}
           </>
