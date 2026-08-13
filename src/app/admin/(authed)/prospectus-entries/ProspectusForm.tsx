@@ -48,6 +48,12 @@ export default function ProspectusForm({ initial }: { initial: ProspectusEntry |
                    defaultValue={initial?.department ?? 'Journalism and Media Studies'} />
       </Card>
 
+      <Card title="Cover image">
+        <ImageUploader kind="prospectus-cover" name="cover"
+                       initialUrl={initial?.coverUrl}
+                       initialPublicId={initial?.coverPublicId} />
+      </Card>
+
       <Card title="Prospectus PDF">
         <p className="text-xs text-gray-500 -mt-2">
           The &ldquo;Download&rdquo; button on the public card links to this PDF.
