@@ -63,6 +63,8 @@ const PLACEHOLDER = (
   <p className="text-gray-400 italic text-sm">Information will be updated soon.</p>
 );
 
+const HIDE_DEPARTMENT_LINE_FOR = new Set(['a-s-m-tariq-iqbal']);
+
 
 function renderSection(value: SectionContent | null | undefined) {
   if (value == null) return PLACEHOLDER;
@@ -213,10 +215,15 @@ export default async function FacultyDetailPage({
                 {member.secondaryTitle && (
                   <p className="text-sm text-gray-600">{member.secondaryTitle}</p>
                 )}
-                <p className="text-sm text-gray-600 flex items-center justify-center lg:justify-start gap-2 pt-1">
-                  <Building2 size={14} className="text-accent shrink-0" />
-                  {dept.name}
-                </p>
+                {/* Hidden for faculty whose home department isn't this one
+                    (e.g. the Dean, who sits in Law) — showing the site's
+                    department name on their card misrepresents them. */}
+                {!HIDE_DEPARTMENT_LINE_FOR.has(member.slug) && (
+                  <p className="text-sm text-gray-600 flex items-center justify-center lg:justify-start gap-2 pt-1">
+                    <Building2 size={14} className="text-accent shrink-0" />
+                    {dept.name}
+                  </p>
+                )}
               </div>
             </div>
 
