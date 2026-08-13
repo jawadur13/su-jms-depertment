@@ -12,7 +12,7 @@ import { sanitizeHtml } from '@/lib/sanitize-html';
 export const metadata = {
   title: 'Admission Requirements — Department of Journalism and Media Studies',
   description:
-    'Admission requirements at Sonargaon University — Undergraduate and Diploma (Engineering) entry criteria.',
+    'Admission requirements at Sonargaon University — undergraduate entry criteria for the Department of Journalism and Media Studies.',
 };
 
 // Phase 8b — DB-driven singleton. Fixed section labels ("Undergraduate
