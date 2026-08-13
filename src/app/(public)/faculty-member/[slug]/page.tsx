@@ -12,7 +12,7 @@ import {
   getPageHero,
 } from '@/lib/identity';
 import { type SectionContent } from '@/lib/faculty-data';
-import { ListItem } from '@/components/ui/LinkifiedText';
+import { LinkifiedText, ListItem, extractUrl } from '@/components/ui/LinkifiedText';
 import ExpandableList from './ExpandableList';
 
 // Pre-render every current slug at build time; Next.js defaults to
@@ -68,7 +68,7 @@ function renderSection(value: SectionContent | null | undefined) {
   if (value == null) return PLACEHOLDER;
 
   if (typeof value === 'string') {
-    return value.trim().length > 0 ? <p>{value}</p> : PLACEHOLDER;
+    return value.trim().length > 0 ? <p><LinkifiedText text={value} /></p> : PLACEHOLDER;
   }
 
   if (!Array.isArray(value) || value.length === 0) return PLACEHOLDER;
@@ -90,6 +90,54 @@ function renderSection(value: SectionContent | null | undefined) {
         </div>
       ))}
     </div>
+  );
+}
+
+type PublicationEntry = { text: string; link?: string };
+
+// Publications have their own shape (not SectionContent) — each
+// citation carries an optional dedicated link, entered via the admin
+// PublicationsEditor, and rendered as its own clickable line below
+// the citation. Older rows saved before this editor existed may still
+// hold a plain string/string[] — read defensively and fall back to
+// extracting a URL embedded in the text itself.
+function renderPublications(value: unknown) {
+  if (value == null) return PLACEHOLDER;
+
+  let entries: PublicationEntry[];
+  if (typeof value === 'string') {
+    entries = value.trim().length > 0 ? [{ text: value }] : [];
+  } else if (Array.isArray(value) && typeof value[0] === 'string') {
+    entries = (value as string[]).map((text) => ({ text }));
+  } else if (Array.isArray(value)) {
+    entries = value as PublicationEntry[];
+  } else {
+    entries = [];
+  }
+  if (entries.length === 0) return PLACEHOLDER;
+
+  return (
+    <ul className="space-y-4">
+      {entries.map((entry, i) => {
+        const explicitLink = entry.link?.trim();
+        const { rest, url } = explicitLink ? { rest: entry.text, url: explicitLink } : extractUrl(entry.text);
+        return (
+          <li key={i} className="list-disc list-outside ml-5">
+            {rest}
+            {url && (
+              <a
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-1 block text-accent underline break-all hover:text-accent/80 transition-colors"
+              >
+                {url}
+              </a>
+            )}
+          </li>
+        );
+      })}
+    </ul>
   );
 }
 
@@ -231,7 +279,9 @@ export default async function FacultyDetailPage({
 
           {SECTIONS.map(({ key, label }) => (
             <AccordionPanel key={key} label={label}>
-              {renderSection((member as Faculty)[key] as SectionContent | null)}
+              {key === 'publications'
+                ? renderPublications((member as Faculty)[key])
+                : renderSection((member as Faculty)[key] as SectionContent | null)}
             </AccordionPanel>
           ))}
         </div>

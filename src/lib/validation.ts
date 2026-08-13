@@ -191,6 +191,16 @@ const sectionContentSchema = z.union([
   ),
 ]);
 
+// Publications — its own shape (not SectionContent): each entry is a
+// citation with an optional dedicated link, rendered as its own
+// clickable line below the citation text on the public faculty page.
+const publicationsSchema = z.array(
+  z.object({
+    text: z.string().min(1),
+    link: z.string().url('Must be a full URL, e.g. https://…').or(z.literal('')).optional(),
+  }),
+);
+
 // PersonalInfo — array of label/value rows
 const personalInfoSchema = z.array(
   z.object({ label: z.string().min(1), value: z.string().min(1) }),
@@ -221,7 +231,7 @@ export const facultyCreateSchema = z.object({
   academicQualification: sectionContentSchema.nullable().optional(),
   trainingExperience:    sectionContentSchema.nullable().optional(),
   teachingArea:          sectionContentSchema.nullable().optional(),
-  publications:          sectionContentSchema.nullable().optional(),
+  publications:          publicationsSchema.nullable().optional(),
   research:              sectionContentSchema.nullable().optional(),
   awards:                sectionContentSchema.nullable().optional(),
   membership:            sectionContentSchema.nullable().optional(),
