@@ -63,7 +63,7 @@ const PLACEHOLDER = (
   <p className="text-gray-400 italic text-sm">Information will be updated soon.</p>
 );
 
-const HIDE_DEPARTMENT_LINE_FOR = new Set(['a-s-m-tariq-iqbal']);
+const SHOW_UNIVERSITY_NAME_FOR = new Set(['a-s-m-tariq-iqbal']);
 
 
 function renderSection(value: SectionContent | null | undefined) {
@@ -215,15 +215,14 @@ export default async function FacultyDetailPage({
                 {member.secondaryTitle && (
                   <p className="text-sm text-gray-600">{member.secondaryTitle}</p>
                 )}
-                {/* Hidden for faculty whose home department isn't this one
-                    (e.g. the Dean, who sits in Law) — showing the site's
-                    department name on their card misrepresents them. */}
-                {!HIDE_DEPARTMENT_LINE_FOR.has(member.slug) && (
-                  <p className="text-sm text-gray-600 flex items-center justify-center lg:justify-start gap-2 pt-1">
-                    <Building2 size={14} className="text-accent shrink-0" />
-                    {dept.name}
-                  </p>
-                )}
+                {/* Faculty whose home department isn't this one (e.g. the
+                    Dean, who sits in Law) show the university name here
+                    instead of the site's department name, which would
+                    otherwise misrepresent them as JMS faculty. */}
+                <p className="text-sm text-gray-600 flex items-center justify-center lg:justify-start gap-2 pt-1">
+                  <Building2 size={14} className="text-accent shrink-0" />
+                  {SHOW_UNIVERSITY_NAME_FOR.has(member.slug) ? uni.name : dept.name}
+                </p>
               </div>
             </div>
 
