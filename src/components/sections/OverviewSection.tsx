@@ -52,15 +52,11 @@ The Department of Journalism and Media Studies at Sonargaon University (SU) offe
             viewport={{ once: true }}
             className="order-1 lg:order-2 overflow-hidden"
           >
-            {/* TODO: placeholder image left over from the Architecture-department
-                site — it lives in a different Cloudinary account (ynfut7mx, not
-                this project's dqbtpess) and does not depict this department.
-                Replace with a real Journalism and Media Studies photo. */}
             <Image
-              src="https://res.cloudinary.com/ynfut7mx/image/upload/f_auto,q_auto:good/v1786350096/sonargaon-arch/gallery/z8xeifkxt2tr6riopuir.webp"
+              src="https://res.cloudinary.com/dqbtpess/image/upload/v1786613542/sonargaon-jms/gallery/classroom-lecture.png"
               alt="Students of the Department of Journalism and Media Studies at Sonargaon University"
               width={2048}
-              height={1364}
+              height={1540}
               sizes="(min-width: 1024px) 540px, 100vw"
               className="h-auto w-full object-cover lg:h-[294px]"
             />
