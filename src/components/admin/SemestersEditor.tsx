@@ -40,7 +40,7 @@ function normalize(initial: unknown): Semester[] {
       id:                 genId('sem'),
       yearLabel:          typeof s.yearLabel === 'string' ? s.yearLabel : '',
       semesterLabel:      typeof s.semesterLabel === 'string' ? s.semesterLabel : '',
-      totalContactHours:  typeof s.totalContactHours === 'string' ? s.totalContactHours : '',
+      totalContactHours:  typeof s.totalContactHours === 'string' ? s.totalContactHours : (typeof s.totalContactHours === 'number' ? String(s.totalContactHours) : ''),
       electiveCreditsRequired: typeof s.electiveCreditsRequired === 'number' ? String(s.electiveCreditsRequired) : '0',
       courses: Array.isArray(s.courses)
         ? (s.courses as unknown[])
