@@ -1,4 +1,5 @@
 import { Download, FileText } from 'lucide-react';
+import { toDownloadUrl } from '@/lib/cloudinary-download-url';
 
 export interface ServiceCharterItem {
   slug: string;
@@ -42,8 +43,7 @@ export default function ServiceCharterClient({ items }: { items: ServiceCharterI
               {/* Download button */}
               {p.pdf ? (
                 <a
-                  href={p.pdf}
-                  download
+                  href={toDownloadUrl(p.pdf, p.shortTitle)}
                   className="shrink-0 inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary hover:bg-primary/90 text-white text-sm font-semibold rounded-md transition-colors whitespace-nowrap"
                 >
                   <Download size={18} />

@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { Download, ExternalLink } from 'lucide-react';
+import { toDownloadUrl } from '@/lib/cloudinary-download-url';
 
 export interface DepartmentLayoutItem {
   slug: string;
@@ -64,8 +65,7 @@ export default function DepartmentLayoutClient({ items }: { items: DepartmentLay
                       View Layout
                     </a>
                     <a
-                      href={p.pdf}
-                      download
+                      href={toDownloadUrl(p.pdf, p.shortTitle)}
                       className="inline-flex items-center justify-center gap-2 w-full px-5 py-3.5 bg-white hover:bg-gray-50 text-primary text-sm font-semibold rounded-lg border-2 border-primary transition-colors"
                     >
                       <Download size={18} />

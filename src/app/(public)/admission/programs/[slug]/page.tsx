@@ -4,6 +4,7 @@ import { FileText, Download, CheckCircle2, ArrowRight, ClipboardCheck, CreditCar
 import PageShell from '@/components/layout/PageShell';
 import Container from '@/components/ui/Container';
 import { getProgramCurriculumBySlug } from '@/lib/identity';
+import { toDownloadUrl } from '@/lib/cloudinary-download-url';
 import { DynamicLucideIcon } from '@/components/ui/DynamicLucideIcon';
 
 type Props = { params: Promise<{ slug: string }> };
@@ -267,7 +268,7 @@ export default async function ProgramCurriculumPage({ params }: Props) {
           </div>
           <div className="flex items-center gap-3 shrink-0">
             {curriculum.syllabusPdfUrl && (
-              <a href={curriculum.syllabusPdfUrl} target="_blank" rel="noopener noreferrer"
+              <a href={toDownloadUrl(curriculum.syllabusPdfUrl, curriculum.heroTitle)}
                  className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white font-medium rounded-lg px-4 py-2.5 text-sm transition-colors">
                 <Download size={16} /> Download PDF
               </a>

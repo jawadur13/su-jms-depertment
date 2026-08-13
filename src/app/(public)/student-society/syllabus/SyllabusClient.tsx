@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { useMemo, useState } from 'react';
 import { Search, Download, ExternalLink } from 'lucide-react';
+import { toDownloadUrl } from '@/lib/cloudinary-download-url';
 
 export type SyllabusCardRow = {
   slug: string;
@@ -138,8 +139,7 @@ export default function SyllabusClient({ items }: { items: readonly SyllabusCard
                       View Syllabus
                     </a>
                     <a
-                      href={s.pdfUrl}
-                      download
+                      href={toDownloadUrl(s.pdfUrl, s.shortTitle)}
                       className="inline-flex items-center justify-center gap-2 w-full px-5 py-3.5 bg-white hover:bg-gray-50 text-primary text-sm font-semibold rounded-lg border-2 border-primary transition-colors"
                     >
                       <Download size={18} />

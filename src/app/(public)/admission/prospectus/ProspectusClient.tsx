@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from 'react';
 import { Search, Download, ExternalLink } from 'lucide-react';
+import { toDownloadUrl } from '@/lib/cloudinary-download-url';
 
 type Level = 'Undergraduate' | 'Postgraduate';
 
@@ -161,8 +162,7 @@ export default function ProspectusClient({ items }: { items: ProspectusItem[] })
                   </div>
 
                   <a
-                    href={p.pdf}
-                    download
+                    href={toDownloadUrl(p.pdf, p.shortTitle)}
                     className="shrink-0 inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-primary hover:bg-primary/90 text-white text-sm font-semibold rounded-lg transition-colors whitespace-nowrap"
                   >
                     <Download size={18} />

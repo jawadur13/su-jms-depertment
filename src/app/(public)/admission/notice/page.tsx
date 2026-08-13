@@ -3,6 +3,7 @@ import PageShell from '@/components/layout/PageShell';
 import Container from '@/components/ui/Container';
 import { getActiveAdmissionNotice, getPageHero } from '@/lib/identity';
 import { sanitizeHtml } from '@/lib/sanitize-html';
+import { toDownloadUrl } from '@/lib/cloudinary-download-url';
 
 export const metadata = {
   title: 'Admission Notice — Department of Journalism and Media Studies',
@@ -149,8 +150,7 @@ export default async function AdmissionNoticePage() {
                 </div>
 
                 <a
-                  href={notice.fileUrl}
-                  download={notice.fileName ?? undefined}
+                  href={toDownloadUrl(notice.fileUrl, notice.fileName)}
                   className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-primary to-accent text-white font-semibold rounded-md shadow-md hover:shadow-lg hover:brightness-110 transition-all whitespace-nowrap"
                 >
                   <Download size={18} />

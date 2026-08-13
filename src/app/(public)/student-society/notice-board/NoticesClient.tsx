@@ -10,6 +10,7 @@ import {
   FileText,
   Image as ImageIcon,
 } from 'lucide-react';
+import { toDownloadUrl } from '@/lib/cloudinary-download-url';
 
 export type NoticeCardRow = {
   slug: string;
@@ -128,8 +129,7 @@ export default function NoticesClient({ notices }: { notices: readonly NoticeCar
                       <ExternalLink size={14} className="opacity-80" />
                     </a>
                     <a
-                      href={n.fileUrl}
-                      download={n.fileName ?? undefined}
+                      href={toDownloadUrl(n.fileUrl, n.fileName)}
                       className="inline-flex items-center gap-2 px-5 py-2.5 bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white text-sm font-semibold rounded-md transition-colors"
                     >
                       <Download size={16} />

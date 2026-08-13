@@ -1,50 +1,33 @@
 import { MapPin } from 'lucide-react';
 
-// Room numbers/floors below are carried over from the previous
-// (Architecture) department's floor plan with the room *purposes*
-// relabelled for Journalism and Media Studies — placeholder until the
-// department confirms its actual room assignments. University-wide
-// offices are shared across departments and not tied to any one
-// department's floor plan, so that list is maintained here directly.
+// Source: the department's official floor plan document
+// (JMS_Department-Layout-Plan.pdf, 147/I Green Road campus). One row
+// from the source ("Office of the of Examinations", Room 211) was
+// dropped as a duplicate of "Office of the Controller of
+// Examinations" (same room). University-wide offices are shared
+// across departments and not tied to any one department's floor
+// plan, so that list is maintained here directly.
 type OfficeRow = { name: string; level: string };
 
 const DEPARTMENT_OFFICES: OfficeRow[] = [
-  { name: 'Student Admission Room', level: '3rd Floor' },
-  { name: 'Staff Room (Room 407)', level: '3rd Floor' },
-  { name: 'Computer Lab (Room 411)', level: '3rd Floor' },
-  { name: 'Common Room & Female Prayer Space', level: '3rd Floor' },
-  { name: "Student's Lounge & Indoor Games", level: '3rd Floor' },
-  { name: 'Office of the Head, Department of Journalism and Media Studies', level: '4th Floor' },
-  { name: 'Faculty Workstation (Room 502)', level: '4th Floor' },
-  { name: "Teacher's Room (Room 503)", level: '4th Floor' },
-  { name: 'Newsroom (Room 501)', level: '4th Floor' },
-  { name: 'Broadcast Studio (Room 504)', level: '4th Floor' },
-  { name: 'Radio Studio (Room 505)', level: '4th Floor' },
-  { name: 'Video Editing Lab (Room 506)', level: '4th Floor' },
-  { name: 'Photography Lab (Room 507)', level: '4th Floor' },
-  { name: 'Digital Media Lab (Room 508)', level: '4th Floor' },
-  { name: 'Screening & Exhibition Space', level: '4th Floor' },
-  { name: 'Lecture Room 1 (Room 601)', level: '5th Floor' },
-  { name: 'Lecture Room 2 (Room 602)', level: '5th Floor' },
-  { name: 'Multimedia Production Lab (Room 603)', level: '5th Floor' },
-  { name: 'Podcast & Audio Lab (Room 604)', level: '5th Floor' },
-  { name: 'Library (Room 608)', level: '5th Floor' },
+  { name: 'Office of the Head, Department of Journalism and Media Studies', level: 'Room 107' },
+  { name: 'Office of the Department of Journalism and Media Studies', level: 'Room 107' },
 ];
 
 const UNIVERSITY_OFFICES: OfficeRow[] = [
-  { name: 'Office of the Vice Chancellor', level: 'Level 01' },
+  { name: 'Office of the Vice Chancellor', level: 'Level 02' },
   { name: 'Office of the Pro-Vice Chancellor', level: 'Level 01' },
-  { name: 'Office of the Treasurer', level: 'Level 04' },
-  { name: 'Office of the Dean, Academic Affairs', level: 'Level 02' },
+  { name: 'Office of the Treasurer', level: 'Room 507 · Level 04' },
   { name: 'Office of the Registrar', level: 'Level 01' },
-  { name: 'Office of the Controller of Examinations', level: 'Level 01' },
-  { name: 'Office Of the Library', level: 'Level 01' },
-  { name: 'Office of the Accounts', level: 'Level 02' },
-  { name: 'Admission Office', level: 'Level 01' },
-  { name: 'Waiver and Scholarship', level: 'Level 02' },
-  { name: 'Card Office', level: 'Level 02' },
-  { name: 'Office of the Safety & Security', level: 'Level 01' },
-  { name: 'Office of CC Control room (Lost & Found)', level: 'Level 01' },
+  { name: 'Office of the Controller of Examinations', level: 'Room 211' },
+  { name: 'Library', level: 'Ground Floor' },
+  { name: 'Office of the Dean, Faculty of Arts and Humanities', level: 'Room 401 · Level 03' },
+  { name: 'Office of the Students Welfare Department (SWD)', level: 'Room 311' },
+  { name: 'Office of the Proctor', level: 'Room 307' },
+  { name: 'Office of the HRDI', level: 'Level UG' },
+  { name: 'Office of the Finance & Accounts (F&A) Director', level: 'Room 313 · Level 02' },
+  { name: 'Office of the Accounts', level: 'Room 313 · Level 02' },
+  { name: 'Admission Office', level: 'Level G' },
 ];
 
 function GroupHeader({ label }: { label: string }) {
