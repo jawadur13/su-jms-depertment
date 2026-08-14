@@ -1223,6 +1223,29 @@ export const innovationHubApplicationStatusUpdateSchema = z.object({
   status: innovationHubApplicationStatusEnum,
 });
 
+// ─── Admission Lead Popup ───────────────────────────────────────
+
+export const admissionLeadCreateSchema = z.object({
+  fullName:     z.string().trim().min(1).max(200),
+  mobileNumber: z.string().trim().min(1).max(50),
+  programName:  z.string().trim().min(1).max(300),
+});
+
+export const admissionLeadStatusEnum = z.enum(['new', 'contacted']);
+
+export const admissionLeadStatusUpdateSchema = z.object({
+  status: admissionLeadStatusEnum,
+});
+
+export const admissionLeadPopupSettingsUpdateSchema = z.object({
+  enabled:      z.boolean(),
+  delaySeconds: z.number().int().min(1).max(300),
+  heading:      z.string().trim().min(1).max(300),
+  subheading:   z.string().trim().min(1).max(500),
+  buttonText:   z.string().trim().min(1).max(100),
+  footerNote:   z.string().trim().min(1).max(300),
+});
+
 // Generic page-hero update. pageKey + publicPath + pageLabel are
 // stable identifiers seeded by migration — they are NOT in the
 // editable surface, so the admin form passes only the hero fields.

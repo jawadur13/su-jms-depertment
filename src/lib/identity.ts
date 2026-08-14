@@ -487,6 +487,14 @@ export const getJourneyCTAContent = cache(async () => {
   return prisma.journeyCTAContent.findUnique({ where: { id: 'singleton' } });
 });
 
+// ─────────────────────────────────────────────────────────────────
+//  Admission lead popup — homepage-only timed lead-capture modal.
+// ─────────────────────────────────────────────────────────────────
+
+export const getAdmissionLeadPopupSettings = cache(async () => {
+  return prisma.admissionLeadPopupSettings.findUnique({ where: { id: 'singleton' } });
+});
+
 // Phase 17 — LegalPagesContent singleton. One row, two public pages
 // (/privacy-policy and /terms-and-conditions). React.cache so both
 // renderers share one DB hit when rendered in the same request
