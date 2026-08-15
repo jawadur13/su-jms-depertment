@@ -17,12 +17,17 @@ export default function OverviewSection() {
           Department of Journalism and Media Studies
         </motion.h2>
 
-        <div className="mx-auto grid max-w-[1090px] items-stretch gap-8 lg:gap-12 lg:grid-cols-[520px_1fr]">
+        {/* Row 1 (text, image) uses items-stretch so the image matches
+            the paragraph's height exactly; the buttons live in their
+            own row below the text column only, via `order` — grid
+            auto-placement fills row 1 (paragraph, image) before
+            wrapping the 3rd item (buttons) onto row 2, col 1. */}
+        <div className="mx-auto grid max-w-[1090px] items-stretch gap-x-8 gap-y-6 lg:gap-x-12 lg:grid-cols-[520px_1fr]">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="order-2 lg:order-1 space-y-6"
+            className="order-2 lg:order-1"
           >
             <p className="text-justify text-[16px] font-medium leading-[1.75] tracking-[0.035em] text-black">
 
@@ -30,20 +35,6 @@ Journalism and Media Studies is a dynamic and challenging field that plays a vit
 
 The Department of Journalism and Media Studies at Sonargaon University (SU) offers a 4-year BSS (Honors) programme featuring a comprehensive, industry-oriented curriculum. The programme emphasizes both theoretical knowledge and practical skills, preparing students for diverse careers in print, broadcast, digital media, strategic communication, and related fields.
 </p>
-            <div className="grid gap-5 sm:grid-cols-2">
-              <a
-                href="/about/overview"
-                className="rounded-full bg-gradient-to-r from-primary to-accent px-8 py-3 text-center text-base font-semibold text-white shadow-md transition-all hover:shadow-premium"
-              >
-                Explore More
-              </a>
-              <a
-                href="/about/deans-message"
-                className="rounded-full bg-gradient-to-r from-primary to-accent px-8 py-3 text-center text-base font-semibold text-white shadow-md transition-all hover:shadow-premium"
-              >
-                Dean's Message
-              </a>
-            </div>
           </motion.div>
 
           <motion.div
@@ -60,6 +51,26 @@ The Department of Journalism and Media Studies at Sonargaon University (SU) offe
               sizes="(min-width: 1024px) 540px, 100vw"
               className="h-auto w-full object-cover lg:h-full"
             />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="order-3 grid gap-5 sm:grid-cols-2 lg:col-start-1"
+          >
+            <a
+              href="/about/overview"
+              className="rounded-full bg-gradient-to-r from-primary to-accent px-8 py-3 text-center text-base font-semibold text-white shadow-md transition-all hover:shadow-premium"
+            >
+              Explore More
+            </a>
+            <a
+              href="/about/deans-message"
+              className="rounded-full bg-gradient-to-r from-primary to-accent px-8 py-3 text-center text-base font-semibold text-white shadow-md transition-all hover:shadow-premium"
+            >
+              Dean's Message
+            </a>
           </motion.div>
         </div>
       </Container>
