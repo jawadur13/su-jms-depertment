@@ -17,7 +17,7 @@ export default function OverviewSection() {
           Department of Journalism and Media Studies
         </motion.h2>
 
-        <div className="mx-auto grid max-w-[1090px] items-start gap-8 lg:gap-12 lg:grid-cols-[520px_1fr]">
+        <div className="mx-auto grid max-w-[1090px] items-stretch gap-8 lg:gap-12 lg:grid-cols-[520px_1fr]">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -50,15 +50,15 @@ The Department of Journalism and Media Studies at Sonargaon University (SU) offe
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="order-1 lg:order-2 overflow-hidden"
+            className="order-1 lg:order-2 overflow-hidden rounded-2xl"
           >
             <Image
-              src="https://res.cloudinary.com/dqbtpess/image/upload/v1786613542/sonargaon-jms/gallery/classroom-lecture.png"
-              alt="Students of the Department of Journalism and Media Studies at Sonargaon University"
+              src="https://res.cloudinary.com/dqbtpess/image/upload/v1786792533/sonargaon-jms/overview/aonfnixiuvvrjddnha8a.png"
+              alt="Students taking notes during a session at the Department of Journalism and Media Studies"
               width={2048}
-              height={1540}
+              height={1365}
               sizes="(min-width: 1024px) 540px, 100vw"
-              className="h-auto w-full object-cover lg:h-[294px]"
+              className="h-auto w-full object-cover lg:h-full"
             />
           </motion.div>
         </div>
