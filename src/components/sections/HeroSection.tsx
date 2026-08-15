@@ -160,7 +160,10 @@ export default function HeroSection({
               <Home size={13} /> Home
             </a>
             <ChevronRight size={13} className="opacity-50" />
-            <a href="#" className="hover:text-button-yellow transition-colors">Dept</a>
+            {/* "Dept" has no page of its own (/about is a route
+                group with no root page.tsx) — plain text, not a
+                dead link. */}
+            <span className="text-white/70">Dept</span>
             <ChevronRight size={13} className="opacity-50" />
             <span className="text-button-yellow font-semibold">{breadcrumbLabel}</span>
           </motion.div>

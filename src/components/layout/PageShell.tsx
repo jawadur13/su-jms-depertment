@@ -13,6 +13,13 @@ const slugToTitle = (slug: string) =>
     .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
     .join(' ');
 
+// These top-level route segments are pure grouping folders — no
+// `page.tsx` exists at their bare path (e.g. `/admission` 404s; only
+// `/admission/requirements`, `/admission/notice`, etc. are real
+// pages). Linking to them in a breadcrumb would 404, so they render
+// as plain text instead of a link.
+const NON_PAGE_SEGMENTS = new Set(['about', 'admission', 'student-society']);
+
 interface PageShellProps {
   title: string;
   subtitle?: string;
@@ -129,17 +136,20 @@ export default function PageShell({
               {segments.map((seg, idx) => {
                 const href = '/' + segments.slice(0, idx + 1).join('/');
                 const isLast = idx === segments.length - 1;
+                const isLinkable = !isLast && !NON_PAGE_SEGMENTS.has(seg);
                 return (
                   <span key={href} className="inline-flex items-center gap-2">
                     <ChevronRight size={13} className="opacity-50" />
-                    {isLast ? (
-                      <span className="text-button-yellow font-semibold">
-                        {slugToTitle(seg)}
-                      </span>
-                    ) : (
+                    {isLinkable ? (
                       <a href={href} className="hover:text-button-yellow transition-colors">
                         {slugToTitle(seg)}
                       </a>
+                    ) : (
+                      <span
+                        className={isLast ? 'text-button-yellow font-semibold' : 'text-white/70'}
+                      >
+                        {slugToTitle(seg)}
+                      </span>
                     )}
                   </span>
                 );
