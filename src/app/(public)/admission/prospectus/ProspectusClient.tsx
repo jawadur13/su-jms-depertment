@@ -18,6 +18,13 @@ export interface ProspectusItem {
 
 const filters: ('All' | Level)[] = ['All', 'Undergraduate', 'Postgraduate'];
 
+// Uploaded prospectus PDFs are US Letter (612x792pt, 8.5x11in) — sizing
+// the preview card to that exact ratio (rather than stretching it
+// w-full) keeps the browser's native PDF viewer's own page canvas
+// filling the card, with no letterboxed black bars on the sides.
+const PDF_PREVIEW_HEIGHT = 600;
+const PDF_PREVIEW_WIDTH = Math.round(PDF_PREVIEW_HEIGHT * (612 / 792));
+
 export default function ProspectusClient({ items }: { items: ProspectusItem[] }) {
   const [query, setQuery] = useState('');
   const [active, setActive] = useState<'All' | Level>('All');
@@ -131,12 +138,14 @@ export default function ProspectusClient({ items }: { items: ProspectusItem[] })
 
               {/* PDF Preview */}
               {p.pdf ? (
-                <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                <div
+                  className="mx-auto bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden"
+                  style={{ width: PDF_PREVIEW_WIDTH, height: PDF_PREVIEW_HEIGHT }}
+                >
                   <iframe
                     src={`${p.pdf}#toolbar=0`}
                     title={p.title}
-                    className="w-full"
-                    style={{ height: '600px' }}
+                    className="w-full h-full"
                   />
                 </div>
               ) : (
