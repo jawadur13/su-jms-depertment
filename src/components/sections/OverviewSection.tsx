@@ -44,10 +44,10 @@ The Department of Journalism and Media Studies at Sonargaon University (SU) offe
             className="order-1 lg:order-2 overflow-hidden rounded-2xl"
           >
             <Image
-              src="https://res.cloudinary.com/dqbtpess/image/upload/v1786792533/sonargaon-jms/overview/aonfnixiuvvrjddnha8a.png"
-              alt="Students taking notes during a session at the Department of Journalism and Media Studies"
-              width={2048}
-              height={1365}
+              src="https://res.cloudinary.com/dqbtpess/image/upload/v1786860655/sonargaon-jms/overview/q1mgzdctd2esu57iqkis.jpg"
+              alt="Students and faculty of the Department of Journalism and Media Studies at Sonargaon University"
+              width={1500}
+              height={1200}
               sizes="(min-width: 1024px) 540px, 100vw"
               className="h-auto w-full object-cover lg:h-full"
             />
