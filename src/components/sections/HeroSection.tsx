@@ -108,7 +108,7 @@ export default function HeroSection({
             transition={{ delay: 0.35, duration: 0.8 }}
             className="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-white uppercase tracking-tight leading-tight drop-shadow-2xl"
           >
-            Journalism &amp; Media Studies
+            Journalism &amp; Media Studies (JMS)
           </motion.h1>
 
           {/* Subtitle */}
@@ -156,14 +156,12 @@ export default function HeroSection({
             transition={{ delay: 0.9 }}
             className="flex items-center justify-center gap-2 text-white/90 text-xs md:text-[13px] font-medium tracking-wide"
           >
-            <a href="/" className="hover:text-button-yellow flex items-center gap-1.5 transition-colors">
+            {/* Homepage hero only: "Home" points to the university's
+                main site, not this department site's own "/" —
+                visitors are already here, so "/" would go nowhere. */}
+            <a href="https://su.edu.bd/" className="hover:text-button-yellow flex items-center gap-1.5 transition-colors">
               <Home size={13} /> Home
             </a>
-            <ChevronRight size={13} className="opacity-50" />
-            {/* "Dept" has no page of its own (/about is a route
-                group with no root page.tsx) — plain text, not a
-                dead link. */}
-            <span className="text-white/70">Dept</span>
             <ChevronRight size={13} className="opacity-50" />
             <span className="text-button-yellow font-semibold">{breadcrumbLabel}</span>
           </motion.div>
